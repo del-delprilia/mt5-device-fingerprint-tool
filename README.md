@@ -65,7 +65,7 @@ This code can then be stored inside your licensed product.
 1. Clone the repository:
 
 ```
-git clone [https://github.com/BaseMax/mt5-device-fingerprint-tool](https://github.com/BaseMax/mt5-device-fingerprint-tool)
+git clone https://github.com/BaseMax/mt5-device-fingerprint-tool
 ```
 
 2. Copy `mt5-device-fingerprint-tool.mq5` (or the provided file) into:
