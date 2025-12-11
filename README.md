@@ -12,7 +12,7 @@ Ideal for sellers who need **per-user licensing**, **hardware locking**, and **s
 - Generates a unique **device fingerprint** from stable MT5 properties  
 - Produces a **SHA-256 hash** for licensing (no external dependencies)  
 - Works fully inside MetaTrader 5 (pure MQL5 implementation)  
-- Zero DLL imports — fully compatible with MetaTrader Market rules  
+- Zero DLL imports, fully compatible with MetaTrader Market rules  
 - Easy integration with commercial indicators and EAs  
 - Clean, readable, well-structured code  
 - Includes raw machine ID + final hashed license code  
